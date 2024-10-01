@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M.S MOBILE</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="border-box">
+            <h1>M.S MOBILE</h1>
+
+            <div class="shop-info border-box">
+                <p>Address: LUNA NAGAR BUS STOP, THADAGAM ROAD, EDAYARPALAYAM, COIMBATORE - 641025</p>
+                <p>Contact: 8248108883</p>
+            </div>
+
+            <div class="customer-info border-box">
+                <label for="customer-name">Customer Name:</label>
+                <input type="text" id="customer-name" placeholder="Enter customer name" />
+            </div>
+
+            <div class="date border-box">
+                <label for="billing-date">Date:</label>
+                <input type="date" id="billing-date" />
+            </div>
+
+            <div class="product-entry border-box">
+                <input type="text" id="product-name" placeholder="Product Name" />
+                <input type="number" id="product-quantity" placeholder="Quantity" min="1" />
+                <input type="number" id="product-price" placeholder="Price per Item" min="0.01" step="0.01" />
+                <button onclick="addProduct()">Add to Bill</button>
+            </div>
+
+            <h2>Billing Summary</h2>
+            <table id="bill-summary" class="border-box">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody id="billing-body">
+                    <!-- Products will be added here -->
+                </tbody>
+            </table>
+
+            <h3>Total: ₹<span id="total-amount">0.00</span></h3>
+
+            <button onclick="generateBill()">Generate Bill</button>
+            <button onclick="printBill()">Print Bill</button>
+
+            <div class="footer">
+                <div class="seal-signature">
+                    <div class="box border-box">
+                        <p></p>
+                    </div>
+                    <div class="box border-box">
+                        <p>Signature</p>
+                    </div>
+                </div>
+                <p class="thank-you-message">Thank you! Visit Again!</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
